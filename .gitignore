@@ -1,5 +1,6 @@
 # Gradle Cache
 .gradle
+/build
 
 # Eclipse IDE related files
 .classpath
