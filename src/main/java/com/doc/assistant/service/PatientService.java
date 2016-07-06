@@ -12,5 +12,7 @@ public interface PatientService {
 	
 	Patient findById(Integer id);
 	
-
+	void savePatient(Patient patient);
+	
+	void deletePatient(Integer id);
 }

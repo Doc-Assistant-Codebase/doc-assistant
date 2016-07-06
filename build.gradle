@@ -9,7 +9,19 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
  
 dependencies {
-      compile "org.springframework:spring-context:+"
-      compile "org.springframework:spring-core:+"
-      testCompile group: 'junit', name: 'junit', version: '4.+'
+	  /* Spring */
+      compile "org.springframework:spring-context:4.1.6.RELEASE"
+      compile "org.springframework:spring-core:4.1.6.RELEASE"
+      compile "org.springframework:spring-tx:4.1.6.RELEASE"
+      compile "org.springframework:spring-orm:4.1.6.RELEASE"
+      /* Hibernate */
+      compile "org.hibernate:hibernate-core:5.1.0.Final"
+      /* jsr303 Validation */
+      compile "org.hibernate:hibernate-validator:5.1.0.Final"
+      compile "javax.validation:validation-api:1.1.0.Final"
+	  /* MySQL */
+	  compile "mysql:mysql-connector-java:5.1.18"
+      /* TestNG */
+      testCompile "org.testng:testng:6.8.8"
+      testCompile "org.mockito:mockito-all:1.9.5"
 }
