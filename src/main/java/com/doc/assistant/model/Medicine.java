@@ -1,7 +1,21 @@
 package com.doc.assistant.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "MEDICINE_MASTER")
 public class Medicine {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(name = "MEDICINE_NAME", nullable = false)
 	private String name;
 	
 	public Medicine(){ }

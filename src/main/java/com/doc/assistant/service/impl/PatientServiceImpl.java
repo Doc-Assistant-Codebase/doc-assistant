@@ -1,47 +1,44 @@
-package com.doc.assistant.service;
+package com.doc.assistant.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.doc.assistant.dao.PatientDao;
 import com.doc.assistant.model.Patient;
+import com.doc.assistant.service.PatientService;
 
-@Service("userService")
+@Service("patientService")
 @Transactional
 public class PatientServiceImpl implements PatientService {
-	private static final AtomicLong counter = new AtomicLong();
+	
+	@Autowired
+	private PatientDao patientDao;
 
 	@Override
-	public List<Patient> getAllUsers() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Patient> getAllPatients() {
+		return patientDao.getAllPatients();
 	}
 
 	@Override
 	public Patient searchByName(String name) {
-		// TODO Auto-generated method stub
-		return null;
+		return patientDao.searchByName(name);
 	}
 
 	@Override
 	public Patient findById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		return patientDao.findById(id);
 	}
 
 	@Override
 	public void savePatient(Patient patient) {
-		// TODO Auto-generated method stub
-		
+		patientDao.savePatient(patient);
 	}
 
 	@Override
 	public void deletePatient(Integer id) {
-		// TODO Auto-generated method stub
-		
+		patientDao.deletePatient(id);
 	}
-
 }

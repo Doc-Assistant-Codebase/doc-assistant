@@ -1,16 +1,45 @@
 package com.doc.assistant.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+@Entity
+@Table(name = "PATIENT_MASTER")
 public class Patient {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Column(name = "FIRST_NAME", nullable = false)
 	private String firstName;
+	
+	@Column(name = "LAST_NAME", nullable = false)
 	private String lastName;
+	
+	@Column(name = "AGE", nullable = false)
 	private int age;
+	
+	@Column(name = "HEIGHT", nullable = false)
 	private int height;
-	private Date lastVisitDate;
-	private Date nextVisitDate;
+	
+	@Column(name = "LAST_VISIT_DATE", nullable = false)
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+	private LocalDate lastVisitDate;
+	
+	@Column(name = "NEXT_VISIT_DATE", nullable = false)
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
+	private LocalDate nextVisitDate;
+	
 	private Set<Prescription> prescriptions;
 	
 	public Patient(){	}
@@ -55,19 +84,19 @@ public class Patient {
 		this.height = height;
 	}
 	
-	public Date getLastVisitDate() {
+	public LocalDate getLastVisitDate() {
 		return lastVisitDate;
 	}
 	
-	public void setLastVisitDate(Date lastVisitDate) {
+	public void setLastVisitDate(LocalDate lastVisitDate) {
 		this.lastVisitDate = lastVisitDate;
 	}
 	
-	public Date getNextVisitDate() {
+	public LocalDate getNextVisitDate() {
 		return nextVisitDate;
 	}
 	
-	public void setNextVisitDate(Date nextVisitDate) {
+	public void setNextVisitDate(LocalDate nextVisitDate) {
 		this.nextVisitDate = nextVisitDate;
 	}
 

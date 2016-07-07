@@ -1,10 +1,10 @@
-package com.doc.assistant.service;
+package com.doc.assistant.dao;
 
 import java.util.List;
 
 import com.doc.assistant.model.Patient;
 
-public interface PatientService {
+public interface PatientDao {
 	
 	List<Patient> getAllPatients();
 	
@@ -15,4 +15,5 @@ public interface PatientService {
 	void savePatient(Patient patient);
 	
 	void deletePatient(Integer id);
+
 }

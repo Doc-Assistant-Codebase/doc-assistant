@@ -21,6 +21,9 @@ dependencies {
       compile "javax.validation:validation-api:1.1.0.Final"
 	  /* MySQL */
 	  compile "mysql:mysql-connector-java:5.1.18"
+	  /* Joda Time */
+	  compile "joda-time:joda-time:2.3"
+	  compile "org.jadira.usertype:usertype.core:3.0.0.CR1"
       /* TestNG */
       testCompile "org.testng:testng:6.8.8"
       testCompile "org.mockito:mockito-all:1.9.5"
