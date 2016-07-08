@@ -5,11 +5,13 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
 import com.doc.assistant.dao.AbstractDao;
 import com.doc.assistant.dao.PatientDao;
 import com.doc.assistant.model.Patient;
 
+@Repository
 public class PatientDaoImpl extends AbstractDao<Integer, Patient> implements PatientDao {
 
 	@Override

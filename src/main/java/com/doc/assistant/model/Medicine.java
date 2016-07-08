@@ -13,6 +13,7 @@ public class Medicine {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "MEDICINE_ID", unique = true, nullable = false)
 	private Integer id;
 	
 	@Column(name = "MEDICINE_NAME", nullable = false)
