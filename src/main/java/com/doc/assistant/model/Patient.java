@@ -1,21 +1,20 @@
 package com.doc.assistant.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.JoinColumn;
 
-import org.hibernate.annotations.Type;
+import com.doc.assistant.util.datetimeconverters.LocalDateTimeConverter;
 
 @Entity
 @Table(name = "PATIENT_MASTER")
@@ -39,15 +38,14 @@ public class Patient {
 	private int height;
 	
 	@Column(name = "LAST_VISIT_DATE", nullable = false)
-    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-	private LocalDate lastVisitDate;
+   	@Convert(converter = LocalDateTimeConverter.class)
+	private LocalDateTime lastVisitDate;
 	
 	@Column(name = "NEXT_VISIT_DATE", nullable = false)
-    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
-	private LocalDate nextVisitDate;
+   	@Convert(converter = LocalDateTimeConverter.class)
+	private LocalDateTime nextVisitDate;
 	
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinTable(name = "PRESCRIPTION", joinColumns = { @JoinColumn(name = "PATIENT_ID") }, inverseJoinColumns = { @JoinColumn(name = "PRESCRIPTION_ID") })
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "patient", cascade = CascadeType.ALL)
 	private Set<Prescription> prescriptions;
 	
 	public Patient(){	}
@@ -92,19 +90,19 @@ public class Patient {
 		this.height = height;
 	}
 	
-	public LocalDate getLastVisitDate() {
+	public LocalDateTime getLastVisitDate() {
 		return lastVisitDate;
 	}
 	
-	public void setLastVisitDate(LocalDate lastVisitDate) {
+	public void setLastVisitDate(LocalDateTime lastVisitDate) {
 		this.lastVisitDate = lastVisitDate;
 	}
 	
-	public LocalDate getNextVisitDate() {
+	public LocalDateTime getNextVisitDate() {
 		return nextVisitDate;
 	}
 	
-	public void setNextVisitDate(LocalDate nextVisitDate) {
+	public void setNextVisitDate(LocalDateTime nextVisitDate) {
 		this.nextVisitDate = nextVisitDate;
 	}
 

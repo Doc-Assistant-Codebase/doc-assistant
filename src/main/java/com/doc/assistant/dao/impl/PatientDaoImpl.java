@@ -1,6 +1,7 @@
 package com.doc.assistant.dao.impl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.hibernate.Criteria;
 import org.hibernate.Query;
@@ -17,7 +18,7 @@ public class PatientDaoImpl extends AbstractDao<Integer, Patient> implements Pat
 	@Override
 	public List<Patient> getAllPatients() {
 		Criteria criteria = createEntityCriteria();
-		return (List<Patient>) criteria.list();
+		return (List<Patient>) criteria.list().stream().distinct().collect(Collectors.toList());
 	}
 
 	@Override
