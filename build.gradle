@@ -18,7 +18,7 @@ eclipse {
  
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
- 
+
 dependencies {
 	  /* Spring */
       compile "org.springframework:spring-context:4.1.6.RELEASE"
@@ -39,7 +39,7 @@ dependencies {
 	  /* Jackson */
 	  compile "com.fasterxml.jackson.core:jackson-databind:2.5.3"
 	  /* Servlet */
-	  compile "javax.servlet:javax.servlet-api:3.1.0"
+	  providedCompile "javax.servlet:javax.servlet-api:3.1.0"
 	  /*  Logging */
 	  compile "log4j:log4j:1.2.17"
       /* TestNG */

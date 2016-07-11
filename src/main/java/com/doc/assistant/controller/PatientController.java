@@ -18,14 +18,12 @@ public class PatientController {
 	@Autowired
 	private PatientService patientService;
 	
-	@RequestMapping(value = "/patient/", method = RequestMethod.GET)
+	@RequestMapping(value = "/api/v1/patient/", method = RequestMethod.GET)
     public ResponseEntity<List<Patient>> getAllPatients() {
         List<Patient> patients = patientService.getAllPatients();
         if(patients.isEmpty()){
-            return new ResponseEntity<List<Patient>>(HttpStatus.NO_CONTENT);//You many decide to return HttpStatus.NOT_FOUND
+            return new ResponseEntity<List<Patient>>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<List<Patient>>(patients, HttpStatus.OK);
     }
-
-
 }

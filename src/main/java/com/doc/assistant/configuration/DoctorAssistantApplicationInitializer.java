@@ -2,8 +2,10 @@ package com.doc.assistant.configuration;
 
 import javax.servlet.Filter;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+@Component
 public class DoctorAssistantApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
