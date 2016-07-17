@@ -18,6 +18,7 @@ import javax.persistence.MapKeyColumn;
 import javax.persistence.Table;
 
 import com.doc.assistant.util.datetimeconverters.LocalDateTimeConverter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name = "PRESCRIPTION")
@@ -30,6 +31,7 @@ public class Prescription {
 	
 	@ManyToOne(targetEntity = com.doc.assistant.model.Patient.class)
 	@JoinColumn(name = "PATIENT_ID", nullable = false)
+    @JsonBackReference
 	private Patient patient;
 	
 	@Column(name = "PRESCRIPTION_DATE", nullable = false)

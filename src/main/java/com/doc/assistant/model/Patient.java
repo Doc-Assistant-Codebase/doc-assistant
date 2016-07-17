@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.doc.assistant.util.datetimeconverters.LocalDateTimeConverter;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name = "PATIENT_MASTER")
@@ -46,6 +47,7 @@ public class Patient {
 	private LocalDateTime nextVisitDate;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "patient", cascade = CascadeType.ALL)
+    @JsonManagedReference
 	private Set<Prescription> prescriptions;
 	
 	public Patient(){	}

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.doc.assistant.model.Patient;
 import com.doc.assistant.service.PatientService;
 
-@RestController
+@RestController(value = "/")
 public class PatientController {
 	
 	@Autowired
