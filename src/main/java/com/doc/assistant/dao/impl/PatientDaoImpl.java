@@ -7,12 +7,14 @@ import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.doc.assistant.dao.AbstractDao;
 import com.doc.assistant.dao.PatientDao;
 import com.doc.assistant.model.Patient;
 
 @Repository
+@Transactional
 public class PatientDaoImpl extends AbstractDao<Integer, Patient> implements PatientDao {
 
 	@Override

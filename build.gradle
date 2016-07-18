@@ -47,4 +47,10 @@ dependencies {
       testCompile "org.testng:testng:6.8.8"
       /* Mockito */
       testCompile "org.mockito:mockito-all:1.9.5"
+      testCompile "junit:junit:4.11"
+      testCompile "org.assertj:assertj-core:3.2.0"
+      testCompile "org.springframework:spring-test:4.1.6.RELEASE"
+      testCompile "org.dbunit:dbunit:2.5.1"
+      	exclude group "junit:junit"
+      testCompile "com.github.springtestdbunit:spring-test-dbunit:1.2.1"
 }
