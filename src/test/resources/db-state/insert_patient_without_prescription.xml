@@ -4,17 +4,15 @@
   <medicine_master MEDICINE_ID="2" MEDICINE_NAME="Temovate "/>
   <medicine_master MEDICINE_ID="3" MEDICINE_NAME="Orajel"/>
   <medicine_master MEDICINE_ID="4" MEDICINE_NAME="Dettol"/>
-  <medicine_master MEDICINE_ID="5" MEDICINE_NAME="Dettol"/>
-  <medicine_master MEDICINE_ID="6" MEDICINE_NAME="Dettol"/>
-  <medicine_master MEDICINE_ID="7" MEDICINE_NAME="Dettol"/>
   <patient_master PATIENT_ID="1" FIRST_NAME="Mukesh" LAST_NAME="Soni" AGE="28" HEIGHT="181" LAST_VISIT_DATE="2016-06-03 01:14:52.0" NEXT_VISIT_DATE="2016-06-17 01:15:08.0"/>
   <patient_master PATIENT_ID="2" FIRST_NAME="Niharika" LAST_NAME="Prasad" AGE="32" HEIGHT="168" LAST_VISIT_DATE="2016-07-05 01:15:32.0" NEXT_VISIT_DATE="2016-07-12 01:15:37.0"/>
   <patient_master PATIENT_ID="3" FIRST_NAME="Pranab" LAST_NAME="Bhattacharya" AGE="40" HEIGHT="172" LAST_VISIT_DATE="2016-05-05 01:22:42.0" NEXT_VISIT_DATE="2016-05-19 01:22:50.0"/>
-  <patient_master PATIENT_ID="5" FIRST_NAME="John" LAST_NAME="Musk" AGE="13" HEIGHT="145" LAST_VISIT_DATE="2016-07-03 23:13:15.0" NEXT_VISIT_DATE="2016-06-26 23:13:15.0"/>
+  <patient_master PATIENT_ID="4" FIRST_NAME="Elon" LAST_NAME="Musk" AGE="13" HEIGHT="145" LAST_VISIT_DATE="2016-07-03 23:13:15.0" NEXT_VISIT_DATE="2016-06-26 23:13:15.0"/>
+  <patient_master PATIENT_ID="5" FIRST_NAME="Sam" LAST_NAME="Johnson" AGE="13" HEIGHT="171" LAST_VISIT_DATE="2016-08-14 03:04:12.0" NEXT_VISIT_DATE="2016-08-07 03:04:12.0"/>
   <prescription PRESCRIPTION_ID="1" PATIENT_ID="1" PRESCRIPTION_DATE="2016-05-03 01:14:52.0"/>
   <prescription PRESCRIPTION_ID="2" PATIENT_ID="1" PRESCRIPTION_DATE="2016-06-03 01:14:52.0"/>
   <prescription PRESCRIPTION_ID="3" PATIENT_ID="2" PRESCRIPTION_DATE="2016-07-05 01:15:32.0"/>
-  <prescription PRESCRIPTION_ID="4" PATIENT_ID="5" PRESCRIPTION_DATE="2016-07-10 23:13:15.0"/>
+  <prescription PRESCRIPTION_ID="4" PATIENT_ID="4" PRESCRIPTION_DATE="2016-07-10 23:13:15.0"/>
   <prescription_medicines_description PRESCRIPTION_ID="1" MEDICINE_ID="1" DESCRIPTION="Twice a day after meals."/>
   <prescription_medicines_description PRESCRIPTION_ID="1" MEDICINE_ID="2" DESCRIPTION="Gargles before sleeping."/>
   <prescription_medicines_description PRESCRIPTION_ID="2" MEDICINE_ID="2" DESCRIPTION="Gargles before sleeping and after waking up."/>

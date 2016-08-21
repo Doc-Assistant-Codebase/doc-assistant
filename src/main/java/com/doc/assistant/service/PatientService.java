@@ -15,4 +15,6 @@ public interface PatientService {
 	void savePatient(Patient patient);
 	
 	void deletePatient(Integer id);
+	
+	void updatePatient(Integer id, Patient updatedPatient);
 }

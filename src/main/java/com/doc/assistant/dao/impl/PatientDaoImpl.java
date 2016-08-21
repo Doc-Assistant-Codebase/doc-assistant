@@ -42,8 +42,15 @@ public class PatientDaoImpl extends AbstractDao<Integer, Patient> implements Pat
 
 	@Override
 	public void deletePatient(Integer id) {
-		Query query = getSession().createSQLQuery("delete from Patient where id = :id");
+		Query query = getSession().createSQLQuery("delete from PATIENT_MASTER where PATIENT_ID = :id");
         query.setInteger("id", id);
         query.executeUpdate();		
+	}
+
+	@Override
+	public void updatePatient(Integer id, Patient updatedPatient) {
+		Patient patient = super.getByKey(id);
+		patient.setFirstName(updatedPatient.getFirstName());
+		
 	}
 }
