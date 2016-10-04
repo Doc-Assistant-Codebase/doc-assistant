@@ -152,4 +152,13 @@ public class PatientServiceTest extends AbstractDaoTest {
 		assertEquals("John", updatedPatient.getFirstName());
 		assertEquals(45, updatedPatient.getAge());
 	}
+	
+	@Test
+	@Transactional @Rollback(true)
+	@DatabaseSetup(value = "classpath:/db-state/initial_dataset.xml")
+	public void testDeletePatient() {
+		patientDao.deletePatient(1);
+		List<Patient> patientList = patientDao.getAllPatients();
+		assertEquals(3, patientList.size());
+	}
 }
